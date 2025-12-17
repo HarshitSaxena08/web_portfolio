@@ -1,52 +1,66 @@
 import React from "react";
 import PageHeaderContent from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
-import ImageOne from "../../images/image1.jpg";
-import ImageTwo from "../../images/image2.jpg";
-import ImageThree from "../../images/image3.jpg";
-import ImageFour from "../../images/image4.jpg";
-import ImageFive from "../../images/image5.jpg";
+// import Jietjind from "../../images/jietjind.png";
+import Jietjind_2 from "../../images/jietjind-ac-in.png";
+// import Tarantula from "../../images/tarantulagear.png"
+import Tarantula_2 from "../../images/tarantulagear-co-il.png"
+// import Kizuna_travel from "../../images/Kizuna-clone.png"
+import Kizuna_travel_2 from "../../images/screencapture-harshitsaxena08-github-io-Kizuna-clone-2025-12-17-13_39_06.png"
+// import Travel_figma from "../../images/Travel-Figma.png"
+import Travel_figma_2png from "../../images/travel-figma-2.png"
+import Cannactive from "../../images/cannactive-co-il.png"
+import Gsolar from "../../images/gsolar-co-il.png"
+import Metalstaffroofing from "../../images/metalstaffroofing-co-nz.png"
+
 import "./styles.css";
 import { useState } from "react";
 
 const portfolioData = [
   {
     id: 2,
-    name: "Ecommerce  || HTML,CSS",
-    image: ImageOne,
-    link: "",
-  },
-  {
-    id: 3,
-    name: "Supplier Design",
-    link: "",
-    image: ImageTwo,
+    name: "Tarantula Gear || Ecommerce ",
+    image: Tarantula_2,
+    link: "https://tarantulagear.co.il/",
   },
   {
     id: 2,
-    name: "Kizuna Travel || React js, CSS",
-    image: ImageThree,
+    name: "Jind Institute of Engineering & Technology",
+    link: "https://www.jietjind.ac.in/",
+    image: Jietjind_2,
+  },
+  {
+    id: 2,
+    name: "Kizuna Travel ",
+    image: Kizuna_travel_2,
     link: "https://github.com/HarshitSaxena08/Kizuna_clone",
   },
   {
     id: 2,
-    name: "Dummy zoho people || React js",
-    image: ImageFour,
+    name: "Cannactive Website",
+    image: Cannactive,
 
-    link: "",
+    link: "https://cannactive.co.il/",
   },
   {
     id: 2,
-    name: "Todo App || React js",
-    image: ImageFour,
+    name: "Metalstaffroofing Website",
+    image: Metalstaffroofing,
 
-    link: "",
+    link: "https://metalstaffroofing.co.nz/",
+  },
+  {
+    id: 2,
+    name: "Gsolar Website",
+    image: Gsolar,
+    link: "https://gsolar.co.il/",
+
   },
   {
     id: 3,
-    name: "Shopping cart design || Figma",
-    image: ImageFive,
-    link: "",
+    name: "Traveling website || Figma",
+    image: Travel_figma_2png,
+    link: "https://www.figma.com/proto/KYcyNJoM58FkpbBTkn7a5l/Project-X?node-id=474-1240&t=n2NptDDtDH8wbigD-1&scaling-scale-down-width&content-scaling%20fixed&page-id=474%3A726",
   },
 ];
 
@@ -122,8 +136,12 @@ const Portfolio = () => {
               <div className="overlay">
                 {index === hoveredValue && (
                   <div>
-                    <p>{item.name}</p>
-                    <button>Visit</button>
+                    <p >{item.name}</p>
+                    
+                    <button onClick={() => window.open(item.link, "_blank")}>
+                      Visit
+                    </button>
+
                   </div>
                 )}
               </div>
